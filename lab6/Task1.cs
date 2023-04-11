@@ -17,6 +17,7 @@ namespace lab6
             foreach(Human person in list)
             {
                 person.ShowInfo();
+                Console.WriteLine();
             }
         }
     }
@@ -52,19 +53,13 @@ namespace lab6
     class Builder : Human
     {
         public int number_of_projects_held;
-        public Builder()
+        public Builder() : base()
         {
-            this.first_name = "None";
-            this.last_name = "None";
-            this.age = 0;
             this.number_of_projects_held = 0;
         }
 
-        public Builder(string first_name, string last_name, int age, int projects_num)
+        public Builder(string first_name, string last_name, int age, int projects_num): base(first_name, last_name, age)
         {
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.age = age;
             this.number_of_projects_held = projects_num;
         }
 
@@ -79,19 +74,13 @@ namespace lab6
     class Sailor : Human
     {
         public int number_of_visited_ships;
-        public Sailor()
+        public Sailor(): base()
         {
-            this.first_name = "None";
-            this.last_name = "None";
-            this.age = 0;
             this.number_of_visited_ships = 0;
         }
 
-        public Sailor(string first_name, string last_name, int age, int ships_num)
+        public Sailor(string first_name, string last_name, int age, int ships_num): base(first_name, last_name, age)
         {
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.age = age;
             this.number_of_visited_ships = ships_num;
         }
 
@@ -106,15 +95,12 @@ namespace lab6
     class Pilot : Human
     {
         public int number_of_races;
-        public Pilot()
+        public Pilot() : base()
         {
-            this.first_name = "None";
-            this.last_name = "None";
-            this.age = 0;
             this.number_of_races = 0;
         }
 
-        public Pilot(string first_name, string last_name, int age, int races_num)
+        public Pilot(string first_name, string last_name, int age, int races_num) : base(first_name, last_name, age)
         {
             this.first_name = first_name;
             this.last_name = last_name;

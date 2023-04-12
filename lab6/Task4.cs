@@ -8,5 +8,9 @@ namespace lab6
 {
     internal class Task4
     {
+        public static void Run()
+        {
+
+        }
     }
 }
